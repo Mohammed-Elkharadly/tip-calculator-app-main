@@ -1,0 +1,270 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap");
+
+::before,
+::after,
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  font-family: "Space Mono", monospace;
+  scroll-behavior: smooth;
+  font-size: 10px;
+}
+
+:root {
+  /* Primary Color */
+  --Strong-cyan: hsl(172, 67%, 45%);
+  /* Neutral Color */
+  --Very-dark-cyan: hsl(183, 100%, 15%);
+  --Dark-grayish-cyan: hsl(186, 14%, 43%);
+  --Grayish-cyan: hsl(184, 14%, 56%);
+  --Light-grayish-cyan: hsl(185, 41%, 84%);
+  --Very-light-grayish-cyan: hsl(189, 41%, 97%);
+  --White: hsl(0, 0%, 100%);
+  /* Fonts */
+  --font-size: 1.8rem;
+  --input-font-size: 2.4rem;
+  --font-weight: 700;
+  /* Animation */
+  --transition: 0.3s;
+}
+
+.container {
+  display: grid;
+  place-items: center;
+  min-height: 100dvh;
+  background-color: var(--Light-grayish-cyan);
+  padding: 5rem 0;
+}
+
+header {
+  margin-bottom: 5rem;
+}
+
+#tip-calculator {
+  background-color: var(--White);
+  padding: 3rem;
+  border-radius: 2rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 3rem;
+}
+
+.form-container {
+  padding: 1rem;
+  width: 41rem;
+  min-width: 33rem;
+}
+
+.bill {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  position: relative;
+  margin-bottom: 3rem;
+}
+
+label,
+legend {
+  font-size: var(--font-size);
+  color: var(--Grayish-cyan);
+}
+
+.dollar {
+  position: absolute;
+  top: 50%;
+  left: 1rem;
+  transform: translateY(50%);
+}
+
+input {
+  padding: 1rem;
+  background-color: var(--Very-light-grayish-cyan);
+  color: var(--Very-dark-cyan);
+  border: .2rem solid transparent;
+  border-radius: 0.5rem;
+  font-size: var(--input-font-size);
+  font-weight: var(--font-weight);
+  cursor: pointer;
+  text-align: right;
+  caret-color: var(--Very-dark-cyan);
+  font-family: "Space Mono", monospace;
+}
+
+input::placeholder {
+  color: var(--Grayish-cyan);
+}
+
+input:focus,
+input:hover {
+  outline: none;
+  border-color: var(--Strong-cyan);
+}
+
+fieldset {
+  border: none;
+  margin-bottom: 3rem;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+legend {
+  margin-bottom: 2rem;
+}
+
+.btn {
+  border: none;
+  padding: 1rem 3.7rem;
+  border-radius: 0.5rem;
+  background-color: var(--Very-dark-cyan);
+  font-size: var(--input-font-size);
+  font-weight: var(--font-weight);
+  width: 11.8rem;
+  color: var(--White);
+  cursor: pointer;
+  transition: var(--transition);
+  font-family: "Space Mono", monospace;
+}
+
+.btn:hover {
+  background-color: var(--Light-grayish-cyan);
+  color: var(--Very-dark-cyan);
+}
+
+#custom {
+  width: 11.8rem;
+}
+
+.number-of-people {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  position: relative;
+}
+
+.person {
+  position: absolute;
+  top: 50%;
+  left: 1rem;
+  transform: translateY(50%);
+}
+
+.error {
+  position: absolute;
+  right: 1rem;
+  top: 0;
+  font-size: 1.5rem;
+  color: hsl(0deg 100% 50% / 70%);
+  display: none;
+}
+
+.result {
+  width: 41rem;
+  background-color: var(--Very-dark-cyan);
+  border-radius: 1rem;
+  padding: 3rem;
+}
+
+.final-result {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 3rem;
+}
+
+.text > span {
+  font-size: var(--font-size);
+  color: var(--Very-light-grayish-cyan);
+}
+
+.text p {
+  font-size: 1.5rem;
+  color: var(--Dark-grayish-cyan);
+}
+
+.amount-result {
+  font-size: 4.5rem;
+  color: var(--Strong-cyan);
+}
+
+.total-result {
+  font-size: 4.5rem;
+  color: var(--Strong-cyan);
+}
+
+#reset {
+  font-size: var(--input-font-size);
+  font-weight: var(--font-weight);
+  text-transform: uppercase;
+  border: none;
+  width: 100%;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  background: var(--Strong-cyan);
+  color: var(--Very-dark-cyan);
+  cursor: pointer;
+  transition: var(--transition);
+  margin-top: 12.5rem;
+}
+
+#reset:hover {
+  background-color: var(--Light-grayish-cyan);
+}
+
+.border-red {
+  border: 0.2rem solid hsl(0deg 100% 50% / 70%);
+}
+
+.block {
+  display: block;
+}
+
+.active {
+  background-color: var(--Strong-cyan);
+}
+
+@media screen and (max-width: 58em) {
+  #tip-calculator {
+    flex-direction: column;
+  }
+
+  #reset {
+    margin-top: 0;
+  }
+}
+
+@media screen and (max-width: 31.5em) {
+  .container {
+    padding: 0;
+  }
+  header {
+    padding-top: 5rem;
+  }
+
+  #tip-calculator {
+    padding: 2rem;
+    border-radius: 2rem 2rem 0 0;
+  }
+
+  .form-container {
+    width: 30rem;
+    padding: 0;
+  }
+
+  #custom {
+    width: 15.7rem;
+  }
+
+  .btn {
+    width: 15.7rem;
+  }
+
+  .result {
+    width: 33rem;
+  }
+}

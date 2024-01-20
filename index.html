@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <!-- displays site properly based on user's device -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Frontend Mentor | Tip calculator app</title>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <div class="logo">
+          <img src="./images/logo.svg" alt="logo" />
+        </div>
+      </header>
+      <main>
+        <form id="tip-calculator" action="#">
+          <div class="form-container">
+            <div class="bill">
+              <label for="bill">Bill</label>
+              <input type="text" name="bill" id="bill" placeholder="0" autocomplete="off" />
+              <img src="./images/icon-dollar.svg" alt="dollar" class="dollar">
+            </div>
+            <fieldset>
+              <legend>Select Tip %</legend>
+              <button class="btn">5%</button>
+              <button class="btn">10%</button>
+              <button class="btn">15%</button>
+              <button class="btn">25%</button>
+              <button class="btn">50%</button>
+              <input
+                type="text"
+                id="custom"
+                name="custom"
+                placeholder="custom"
+                autocomplete="off" 
+              />
+            </fieldset>
+            <div class="number-of-people">
+              <label for="number">Number of People</label>
+              <input type="text" id="number" name="number" placeholder="0" autocomplete="off" >
+              <img src="./images/icon-person.svg" alt="person" class="person">
+              <div class="error">Can`t be zero</div>
+            </div>
+          </div>
+          <div class="result">
+            <div class="amount-container final-result">
+              <div class="text">
+                <span>Tip Amount</span>
+                <p>/ person</p>
+              </div>
+              <div class="amount-result">$0.00</div>
+            </div>
+            <div class="total-container final-result">
+              <div class="text">
+                <span>Total</span>
+                <p>/ person</p>
+              </div>
+              <div class="total-result">$0.00</div>
+            </div>
+            <button type="reset" id="reset">reset</button>
+          </div>
+        </form>
+      </main>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>
