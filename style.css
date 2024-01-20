@@ -84,7 +84,7 @@ input {
   padding: 1rem;
   background-color: var(--Very-light-grayish-cyan);
   color: var(--Very-dark-cyan);
-  border: .2rem solid transparent;
+  border: 0.2rem solid transparent;
   border-radius: 0.5rem;
   font-size: var(--input-font-size);
   font-weight: var(--font-weight);
@@ -102,6 +102,10 @@ input:focus,
 input:hover {
   outline: none;
   border-color: var(--Strong-cyan);
+}
+
+input:focus::placeholder {
+  color: transparent;
 }
 
 fieldset {
